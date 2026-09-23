@@ -1,6 +1,26 @@
 # dsh-console
 
-DSH (DeepSeek Harness) 控制台插件——在 Web 界面直接开真 PTY 终端跑命令，不离开聊天上下文。
+<p align="center">
+  <h1 align="center">dsh-console</h1>
+</p>
+
+<p align="center">
+  <strong>DSH 控制台插件——在 Web 界面直接开真 PTY 终端跑命令，不离开聊天上下文。</strong>
+</p>
+
+<p align="center">
+  <a href="https://github.com/chinazkk/dsh-console/issues">Report an issue</a>
+  · <a href="https://github.com/chinazkk/dsh-console">View on GitHub</a>
+</p>
+
+<p align="center">
+  <a href="LICENSE"><img src="https://img.shields.io/badge/license-MIT-blue.svg" alt="MIT License"></a>
+  <img src="https://img.shields.io/badge/DSH-Web%20Plugin-10b981" alt="DSH Web Plugin">
+  <img src="https://img.shields.io/badge/Node.js-%E2%89%A518-339933?logo=nodedotjs&logoColor=white" alt="Node.js 18 or later">
+  <img src="https://img.shields.io/badge/bundle-dsh.bundle%2Bdsh.client-8b5cf6" alt="DSH bundle">
+</p>
+
+> dsh-console 是一个社区维护的 DSH 插件，非 DeepSeek 官方产品。
 
 ## 功能
 
