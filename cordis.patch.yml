@@ -1,0 +1,4 @@
+# dsh-console bundle patch — injects the plugin into the web profile
+- insert:
+    - id: dsh-console
+      name: dsh-console

@@ -1,0 +1,76 @@
+{
+  "name": "dsh-console",
+  "version": "0.1.0",
+  "description": "DSH 控制台插件：主视图「控制台」标签页，真 PTY 交互终端（iTerm 风格多标签），vim/top/ctrl+c 全支持。",
+  "license": "MIT",
+  "type": "module",
+  "main": "lib/index.js",
+  "types": "lib/types/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./lib/types/index.d.ts",
+      "default": "./lib/index.js"
+    },
+    "./client": {
+      "types": "./lib/types/client/index.d.ts",
+      "default": "./lib/client.js"
+    },
+    "./package.json": "./package.json"
+  },
+  "files": [
+    "lib",
+    "src",
+    "tsconfig.json",
+    "tsconfig.client.json",
+    "tsdown.config.ts",
+    "README.md"
+  ],
+  "scripts": {
+    "build": "tsc -p tsconfig.json && tsc -p tsconfig.client.json && tsdown",
+    "typecheck": "tsc -p tsconfig.json --noEmit && tsc -p tsconfig.client.json --noEmit"
+  },
+  "keywords": [
+    "deepseek-harness",
+    "dsh",
+    "console",
+    "terminal",
+    "pty",
+    "xterm",
+    "iterm"
+  ],
+  "engines": {
+    "node": ">=18"
+  },
+  "peerDependencies": {
+    "@deepseek-ai/cordis": ">=0.1.0",
+    "react": ">=18.0.0"
+  },
+  "devDependencies": {
+    "@types/node": "^26.6.2",
+    "@xterm/xterm": "^5.5.0",
+    "tsdown": "^0.22.2",
+    "typescript": "^5.5.0"
+  },
+  "dsh": {
+    "about": {
+      "title": "DSH Console",
+      "summary": "DSH 主视图「控制台」标签页：真 PTY 交互终端，iTerm 风格多标签。",
+      "description": "在 DSH Web 界面直接开终端跑命令，不离开聊天上下文。每个标签一个独立 PTY 会话，支持交互式程序（vim/top/ctrl+c），输出 SSE 流式推送。",
+      "highlights": [
+        "真 PTY 交互终端，交互式程序全支持",
+        "iTerm 风格多标签栏，+ 新建 / × 关闭",
+        "输出 SSE 实时流式，切换标签不丢内容",
+        "用户真实 shell 环境（登录 shell + 完整 env）"
+      ]
+    },
+    "bundle": {
+      "patch": "cordis.patch.yml"
+    },
+    "client": {
+      "inject": [
+        "@deepseek-ai/dsh-client-runtime"
+      ],
+      "platform": "web"
+    }
+  }
+}
